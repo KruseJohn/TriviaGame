@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+</head>
+
+<body>
+        <div class="background" style="background-image: url(assets/images/746w30.gif)">
+            
+            <iframe src="assets/images/That's Why We Believe.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
+            <audio controls autoplay>  <!--This audio control is the browser's default player, which I purposely set to autoplay and hidden...-->
+                <source src="assets/images/That's Why We Believe.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+            </audio>
+            <div id="game"> 
+                <div class="container">     
+                    <div class="row"></div>
+                </div>  
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col"></div>
+                      
+                        <div class="col-sm-4 mt-1">
+                            <div class="container">
+                                <div class="rounded-circle m-0 p-5" style="border: .1px solid rgb( 200, 200, 200);">
+                                    <br>
+                                    <h2 class="display-5 mt-2" style="text-align: center;">The Psychic Game!</h2>
+                                    <br>   
+                                    <!--this is where user input and calculations will be displayed-->
+                                    <p><h5>Guess what letter I'm thinking of:  <span id="user-text"></span></h5></p>
+                                    <p><h5>Wins:  <span id="numbWins">0</span></h5></p>
+                                    <p><h5>Losses:  <span id="numbLosses">0</span></h5></p>
+                                    <p><h5>Guesses left:  <span id="remaining">10</span></h5></p>
+                                    <p><h5>Guesses so far:  <span id="soFar"></span></h5></p>                                                 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col"></div>   
+                    </div>
+                </div>
+            </div> 
+        </div> 
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script src="assets/javascript/game.js">
+    </script>
+
+               
+</body>
+</html>
