@@ -9,33 +9,36 @@
 </head>
 
 <body>
-        <div class="background" style="background-image: url(assets/images/746w30.gif)">
+        <div class="background" style="background-image: url(assets/images/patriotic.jpg)"> 
             
-            <iframe src="assets/images/That's Why We Believe.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
-            <audio controls autoplay>  <!--This audio control is the browser's default player, which I purposely set to autoplay and hidden...-->
-                <source src="assets/images/That's Why We Believe.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-            </audio>
-            <div id="game"> 
-                <div class="container">     
-                    <div class="row"></div>
-                </div>  
+            <div id="game">   
                 <div class="container">
-                    <div class="row mt-5">
-                        <div class="col"></div>
+                    <div class="row">
+                        <div class="col-sm-1"></div>
                       
-                        <div class="col-sm-4 mt-1">
-                            <div class="container">
-                                <div class="rounded-circle m-0 p-5" style="border: .1px solid rgb( 200, 200, 200);">
-                                    <br>
-                                    <h2 class="display-5 mt-2" style="text-align: center;">The Psychic Game!</h2>
-                                    <br>   
-                                    <!--this is where user input and calculations will be displayed-->
-                                    <p><h5>Guess what letter I'm thinking of:  <span id="user-text"></span></h5></p>
-                                    <p><h5>Wins:  <span id="numbWins">0</span></h5></p>
-                                    <p><h5>Losses:  <span id="numbLosses">0</span></h5></p>
-                                    <p><h5>Guesses left:  <span id="remaining">10</span></h5></p>
-                                    <p><h5>Guesses so far:  <span id="soFar"></span></h5></p>                                                 
+                        <div class="col-sm-10 mt-5">
+                            <div class="jumbotron" id="body">
+                                <div class="container">
+                                    <h1 class="display-4" id="title">American States Trivia!</h1>
+                                    <p class="lead">Select the best answer to the following questions before time runs out!</p>
+                                        <hr class="my-4">
+                                            <div class="countdown">
+                                                <div id="timer">01:30</div>
+                                            </div>
+                                    
+                                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                                
+                                    
+                                        <h2 class="display-5 mt-2">Which State?</h2>
+                                      
+                                        <!--this is where user input and calculations will be displayed-->
+                                        <p><h5>Which state is known as The Keystone State?</h5></p>
+                                        <p><h5>Which state </h5></p>
+                                        <p><h5>Losses:  <span id="numbLosses">0</span></h5></p>
+                                        <p><h5>Guesses left:  <span id="remaining">10</span></h5></p>
+                                        <p><h5>Guesses so far:  <span id="soFar"></span></h5></p>
+                                         
+                                    </div>                                             
                                 </div>
                             </div>
                         </div>
@@ -45,10 +48,110 @@
             </div> 
         </div> 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
-    <script src="assets/javascript/game.js">
-    </script>
+<script type="text/javascript">
+      
+    $(document).ready(function() {
+
+    //--global variables--//
+
+    
+    var correct = 0,
+        incorrect = 0,
+        unanswered = 0,
+        answers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        timeleft = 90;
+
+    //--main countdown timer--//
+
+    var downloadTimer = setInterval(function() {
+        timeleft--;
+        $("#timer").text(timeleft);
+        if (timeleft <= 0)
+            clearInterval(downloadTimer);
+
+            //--Get the current time, pass that into the timer.timeConverter function,
+            //       and save the result in a variable.
+        var converted = timeConverter(timeleft);
+        console.log(converted);
+
+            //--Use the variable we just created to show the converted time in the "timer" div.
+        $("#timer").text(converted); 
+
+             
+        function timeConverter(t) {
+
+        var minutes = Math.floor(t / 60);
+        var seconds = t - (minutes * 60);
+
+        if (seconds < 10) {
+        seconds = "0" + seconds;
+    }
+
+        if (minutes === 0) {
+        minutes = "00";
+    }   
+        else if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+
+        return minutes + ":" + seconds;
+    }   
+            
+
+    },1000);
+
+//window.onload = function() {
+    //$("#timer").text("00:60");
+
+    //var time = 60;
+    
+    //function count() {
+
+    //--decrement time by 1--//
+    //time--;
+
+    //if (!timerRunning) {
+    //  intervalId = setInterval(timer.count, 1000);
+    //  timerRunning = true;
+    //}
+    
+
+    //--Get the current time, pass that into the timer.timeConverter function,
+    //       and save the result in a variable.
+    //var converted = timeConverter(time);
+    //console.log(converted);
+
+    //--Use the variable we just created to show the converted time in the "timer" div.
+    //$("#timer").text(converted); 
+//}
+
+    //function timeConverter(t) {
+
+    //var minutes = Math.floor(t / 60);
+    //var seconds = t - (minutes * 60);
+
+    //if (seconds < 10) {
+    //seconds = "0" + seconds;
+//}
+
+    //if (minutes === 0) {
+   //minutes = "00";
+//}
+    //else if (minutes < 10) {
+    //minutes = "0" + minutes;
+//}
+
+    //return minutes + ":" + seconds;
+//}
+
+//}
+
+
+
+});
+</script>
 
                
 </body>
