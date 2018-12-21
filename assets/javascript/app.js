@@ -43,7 +43,10 @@ $(document).ready(function () {
             if ($("input[name='q" + i + "']:checked").val() == "x")  {
             
                 correct++;
-            } 
+            }
+            else if ($("input[name='q" + i + "']:checked").val() === undefined) {
+                unanswered++;
+            }
             else {
 
                 incorrect++;
@@ -52,26 +55,23 @@ $(document).ready(function () {
                 //unanswered = ("unchecked");
                 //window.location.href="index3.html";
             //}
-            if ($("input:checked") !== true) {
-                
-                notChecked = ($("input:checked") !== true); 
-                unanswered++;
-            }
+            
             //return results; 
         }
     
-        $("#score").html("Correct: " + correct + "<br/>Incorrect: " + incorrect + "<br/>Unanswered: " + unanswered);
-    
-       newPage;
+        $("#score").append("Correct: " + correct + "<br/>Incorrect: " + incorrect + "<br/>Unanswered: " + unanswered);
+        //window.location.href = "index3.html";
+       //newPage;
     };
 
     
-       var delay = 10000;
+       var delay = 90000;
        setTimeout(function(){
-            window.location.href = "index3.html"; 
-            alert("time up");
-            //$("#score").html("Correct: " + correct + "<br/>Incorrect: " + incorrect + "<br/>Unanswered: " + unanswered);
+            //alert("Correct: " + correct + "<br/>Incorrect: " + incorrect + "<br/>Unanswered: " + unanswered);
+            $("#score").append("Correct: " + correct + "<br/>Incorrect: " + incorrect + "<br/>Unanswered: " + unanswered);
             console.log("Correct: " + correct + "<br/>Incorrect: " + incorrect + "<br/>Unanswered: " + unanswered);
+            window.location.href = "index3.html"; 
+            
        },delay);
         
        
