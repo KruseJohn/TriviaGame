@@ -1,43 +1,24 @@
 $(document).ready(function () {
 
     //--global variable--//
-
-    var timeleft = 90;
+    var timeleft = 60;
 
     //  Click event to start the game.
     window.onload = function () {
-        $("#start").click(downloadTimer.start);
+        $("#start").click(downloadTimer.start);   
     };
-
-    // I replaced these js .onclick functions with jquery below...but they didn't seem to work...
-   //window.onload = init;
-
-    //function init() {
-        //document.getElementById("validate").onclick = results; 
-        
-        //document.getElementById("clear").onclick = clear;
-
-        //document.getElementById("quiz").getElementsByTagName("input").onclick = userInput;
-    //};
 
     // Click event to tally results after the game.
     window.onload = function() {
-        $("#validate").click(results);
-        
+        $("#validate").click(results);    
     };
 
-    // Click event to show the answers on another page.
-    //window.onload = function() {
-         //showResults = newPage;
-    //};
-    
     function results() {
 
          correct = 0;
          incorrect = 0;
          unanswered = 0;
-        
-        
+
         for (var i = 1; i < 11; i++) {
             
             if ($("input[name='q" + i + "']:checked").val() == "x")  {
@@ -51,36 +32,26 @@ $(document).ready(function () {
 
                 incorrect++;
             }
-            //if (timeleft <= 0) {
-                //unanswered = ("unchecked");
-                //window.location.href="index3.html";
-            //}
-            
-            //return results; 
+
+            $("#title").hide();
+            $("#quiz").hide();
+            $("#whichState").hide();
+            $("#validate").hide();
+            $("#score").html("Correct: " + correct + "<br/>Incorrect: " + incorrect + "<br/>Unanswered: " + unanswered);
+            $("#timer").hide();
+            $("#tally").show();
+            $("#clear").show();
+            $("#jack").show();
+                 
         }
     
-        $("#score").append("Correct: " + correct + "<br/>Incorrect: " + incorrect + "<br/>Unanswered: " + unanswered);
-        //window.location.href = "index3.html";
-       //newPage;
     };
 
-    
-       var delay = 90000;
-       setTimeout(function(){
-            //alert("Correct: " + correct + "<br/>Incorrect: " + incorrect + "<br/>Unanswered: " + unanswered);
-            $("#score").append("Correct: " + correct + "<br/>Incorrect: " + incorrect + "<br/>Unanswered: " + unanswered);
-            console.log("Correct: " + correct + "<br/>Incorrect: " + incorrect + "<br/>Unanswered: " + unanswered);
-            window.location.href = "index3.html"; 
-            
-       },delay);
+       setTimeout(results, 60000);
         
-       
-    
-
-    //function clear() {
-
-        //$("#score").html("");
-    //};
+       $("#clear").hide();
+       $("#jack").hide();
+       $("#tally").hide();
 
     //--main countdown timer--//
 

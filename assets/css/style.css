@@ -51,9 +51,27 @@
     padding: 20px;
 }
 
+#start {
+    padding-top: 250px;
+}
+
 #score {
-    font-size: 30px;
-    color: black;
+    font-size: 40px;
+    color: darkred;
+    text-align: center;
+}
+
+#tally {
+    text-align: center;
+    border: 1px solid gray;
+    background-color: lightskyblue;
+    color: darkblue;
+}
+
+#paper {
+    background-position: center;
+    background-size: 100%;
+    background-repeat: repeat;
 }
 
 
