@@ -1,246 +1,193 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trivia Game pg 2</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
 </head>
 
 <body>
-        <div class="background" style="background-image: url(assets/images/patriotic.jpg)"> 
-            
-            <div id="game">   
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-1"></div>
-                      
-                        <div class="col-sm-10 mt-5">
-                            <div class="jumbotron" id="body">
-                                <div class="container">
-                                    <h1 class="display-4" id="title">American States Trivia!</h1>
-                                    <br>                   
-                                    <div class="countdown">
-                                        <div id="timer">01:30</div>
-                                    </div>                        
-                                        <h2 class="display-5 mt-2" style="text-align: center;">Which State?</h2>
-                                        <br>
-                                        <!--this is where user input and calculations will be displayed-->
-                                        
-                                    <div id="q1">
-                                        <legend><b>Question 1</legend>
+    <div class="background" style="background-image: url(assets/images/patriotic.jpg)">
+
+        <div id="game">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-1"></div>
+
+                    <div class="col-sm-10 mt-5">
+                        <div class="jumbotron">
+                            <div class="container">
+                                <h1 class="display-4 pt-2 pb-3" id="title">American States Trivia!</h1>
+                                <br>
+                                <div class="countdown">
+                                    <div id="timer">01:30</div>
+                                </div>
+                                <h2 class="display-5 mt-2" style="text-align: center;">Which State?</h2>
+                                <br><h3 id="score"></h3>
+                                <!--this is where user input and calculations will be displayed-->
+                                <div id="quiz">
+                                    <div id="qs1">
+                                        <img class="card-img" src="assets/images/constitution.jpg">
                                         <legend>Which state has the nickname of "The Keystone State"?</legend>
-                                        <label><input type="radio" name="q1" value="p"> Ohio</label>
+                                        <label><input type="radio" name="q1" value="p"> Delaware</label>
                                         <br>
                                         <label><input type="radio" name="q1" value="x"> Pennsylvania</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="y"> Kentucky</label>
+                                        <label><input type="radio" name="q1" value="y"> Massachusetts</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="m"> South Dakota</label>
+                                        <label><input type="radio" name="q1" value="m"> Virginia</label>
                                         <br>
                                         <label><input type="radio" name="q1" value="f"> New Hampshire</label>
                                     </div>
                                     <br>
-                                    <div id="q2" style="text-align: right;">
-                                        <legend>Question 2</legend>
+                                    <div id="qs2">
+                                        <img class="card-img" src="assets/images/live-free-or-die.jpeg">
                                         <legend>Which state's motto is "Live Free or Die"?</legend>
-                                        <label>Texas <input type="radio" name="q1" value="p"></label>
+                                        <label><input type="radio" name="q2" value="p"> Texas</label>
                                         <br>
-                                        <label>Massachusetts <input type="radio" name="q1" value="m"></label>
+                                        <label><input type="radio" name="q2" value="m"> Massachusetts</label>
                                         <br>
-                                        <label>Delaware <input type="radio" name="q1" value="y"></label>
+                                        <label><input type="radio" name="q2" value="y"> Delaware</label>
                                         <br>
-                                        <label>New Hampshire <input type="radio" name="q1" value="x"></label>
+                                        <label><input type="radio" name="q2" value="x"> New Hampshire</label>
                                         <br>
-                                        <label>Virginia <input type="radio" name="q1" value="f"></label>
+                                        <label><input type="radio" name="q2" value="f"> Virginia</label>
                                     </div>
                                     <br>
-                                    <div id="q3">
-                                        <legend>Question 3</legend>
+                                    <div id="qs3">
+                                        <img class="card-img" src="assets/images/bison.jpg">
                                         <legend>The American Bison is the state animal of which state?</legend>
-                                        <label><input type="radio" name="q1" value="x"> Kansas</label>
+                                        <label><input type="radio" name="q3" value="x"> Kansas</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="m"> Nebraska</label>
+                                        <label><input type="radio" name="q3" value="m"> Nebraska</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="y"> South Dakota</label>
+                                        <label><input type="radio" name="q3" value="y"> South Dakota</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="p"> Montana</label>
+                                        <label><input type="radio" name="q3" value="p"> Montana</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="f"> Wyoming</label>
+                                        <label><input type="radio" name="q3" value="f"> Wyoming</label>
                                     </div>
                                     <br>
-                                    <div id="q4" style="text-align: right;">
-                                        <legend>Question 4</legend>
+                                    <div id="qs4">
+                                        <img class="card-img" src="assets/images/Augusta.jpg">
                                         <legend>Which state's capital is in the city of Augusta?</legend>
-                                        <label>Vermont <input type="radio" name="q1" value="p"></label>
+                                        <label><input type="radio" name="q4" value="p"> Vermont</label>
                                         <br>
-                                        <label>Delaware <input type="radio" name="q1" value="m"></label>
+                                        <label><input type="radio" name="q4" value="m"> Delaware</label>
                                         <br>
-                                        <label>Georgia <input type="radio" name="q1" value="y"></label>
+                                        <label><input type="radio" name="q4" value="y"> Georgia</label>
                                         <br>
-                                        <label>Maine <input type="radio" name="q1" value="x"></label>
+                                        <label><input type="radio" name="q4" value="x"> Maine</label>
                                         <br>
-                                        <label>South Carolina <input type="radio" name="q1" value="f"></label>
+                                        <label><input type="radio" name="q4" value="f"> South Carolina</label>
                                     </div>
                                     <br>
-                                    <div id="q5">
-                                        <legend>Question 5</legend>
+                                    <div id="qs5">
+                                        <img class="card-img" src="assets/images/Beehive.png">
                                         <legend>Which state has the nickname of "The Beehive State"?</legend>
-                                        <label><input type="radio" name="q1" value="p" /> Nevada</label>
+                                        <label><input type="radio" name="q5" value="p" /> Nevada</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="m" /> Iowa</label>
+                                        <label><input type="radio" name="q5" value="m" /> Iowa</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="y" /> Oklahoma</label>
+                                        <label><input type="radio" name="q5" value="y" /> Oklahoma</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="f" /> Arizona</label>
+                                        <label><input type="radio" name="q5" value="f" /> Arizona</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="x" /> Utah</label>
+                                        <label><input type="radio" name="q5" value="x" /> Utah</label>
                                     </div>
                                     <br>
-                                    <div id="q6" style="text-align: right;">
-                                        <legend>Question 6</legend>
+                                    <div id="qs6">
+                                        <img class="card-img" src="assets/images/flag.png">
                                         <legend>Which state became the first state of the United States?</legend>
-                                        <label>Rhode Island <input type="radio" name="q1" value="p"></label>
+                                        <label><input type="radio" name="q6" value="p"> Rhode Island</label>
                                         <br>
-                                        <label>Massachusetts <input type="radio" name="q1" value="m"></label>
+                                        <label><input type="radio" name="q6" value="m"> Massachusetts</label>
                                         <br>
-                                        <label>Delaware <input type="radio" name="q1" value="x"></label>
+                                        <label><input type="radio" name="q6" value="x"> Delaware</label>
                                         <br>
-                                        <label>New Hampshire <input type="radio" name="q1" value="y"></label>
+                                        <label><input type="radio" name="q6" value="y"> New Hampshire</label>
                                         <br>
-                                        <label>Virginia <input type="radio" name="q1" value="f"></label>
+                                        <label><input type="radio" name="q6" value="f"> Virginia</label>
                                     </div>
                                     <br>
-                                    <div id="q7">
-                                        <legend>Question 7</legend>
+                                    <div id="qs7">
+                                        <img class="card-img" src="assets/images/rushmore.jpg">
                                         <legend>In which state can you find Mount Rushmore?</legend>
-                                        <label><input type="radio" name="q1" value="p"> Idaho</label>
+                                        <label><input type="radio" name="q7" value="p"> Idaho</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="m"> California</label>
+                                        <label><input type="radio" name="q7" value="m"> California</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="y"> Wyoming</label>
+                                        <label><input type="radio" name="q7" value="y"> Wyoming</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="x"> South Dakota</label>
+                                        <label><input type="radio" name="q7" value="x"> South Dakota</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="f"> Montana</label>
+                                        <label><input type="radio" name="q7" value="f"> Montana</label>
                                     </div>
                                     <br>
-                                    <div id="q8" style="text-align: right;">
-                                        <legend>Question 8</legend>
+                                    <div id="qs8">
+                                        <img class="card-img" src="assets/images/card.jpg">
                                         <legend>The Northern Cardinal is the state bird of these states except...</legend>
-                                        <label>Kentucky <input type="radio" name="q1" value="p"></label>
+                                        <label><input type="radio" name="q8" value="p"> Kentucky</label>
                                         <br>
-                                        <label>New York <input type="radio" name="q1" value="x"></label>
+                                        <label><input type="radio" name="q8" value="x"> New York</label>
                                         <br>
-                                        <label>Ohio <input type="radio" name="q1" value="y"></label>
+                                        <label><input type="radio" name="q8" value="m"> Ohio</label>
                                         <br>
-                                        <label>Illinois <input type="radio" name="q1" value="m"></label>
+                                        <label><input type="radio" name="q8" value="y"> Illinois</label>
                                         <br>
-                                        <label>Virginia <input type="radio" name="q1" value="f"></label>
+                                        <label><input type="radio" name="q8" value="f"> Virginia</label>
                                     </div>
                                     <br>
-                                    <div id="q9">
-                                        <legend>Question 9</legend>
+                                    <div id="qs9">
+                                        <img class="card-img" src="assets/images/Panning.jpg">
                                         <legend>Which state has the nickname "The Gem State"?</legend>
-                                        <label><input type="radio" name="q1" value="p"> Wyoming</label>
+                                        <label><input type="radio" name="q9" value="p"> Wyoming</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="m"> Nevada</label>
+                                        <label><input type="radio" name="q9" value="m"> Nevada</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="y"> Montana</label>
+                                        <label><input type="radio" name="q9" value="y"> Montana</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="f"> Colorado</label>
+                                        <label><input type="radio" name="q9" value="f"> Colorado</label>
                                         <br>
-                                        <label><input type="radio" name="q1" value="x"> Idaho</label>
+                                        <label><input type="radio" name="q9" value="x"> Idaho</label>
                                     </div>
                                     <br>
-                                    <div id="q10" style="text-align: right;">
-                                        <legend>Question 10</legend>
+                                    <div id="qs10">
+                                        <img class="card-img" src="assets/images/shot-heard.jpg">
                                         <legend>In which state were the first shots of the American Revolution fired?</legend>
-                                        <label>Massachusetts <input type="radio" name="q1" value="x"></label>
+                                        <label><input type="radio" name="q10" value="x"> Massachusetts</label>
                                         <br>
-                                        <label>New York <input type="radio" name="q1" value="m"></label>
+                                        <label><input type="radio" name="q10" value="p"> New York</label>
                                         <br>
-                                        <label>Delaware <input type="radio" name="q1" value="y"></label>
+                                        <label><input type="radio" name="q10" value="m"> Delaware</label>
                                         <br>
-                                        <label>New Hampshire <input type="radio" name="q1" value="p"></label>
+                                        <label><input type="radio" name="q10" value="y"> New Hampshire</label>
                                         <br>
-                                        <label>Virginia <input type="radio" name="q1" value="f"></label>
+                                        <label><input type="radio" name="q10" value="f"> Virginia</label>
                                     </div>
-                                    <br>  
-                                        <a class="btn btn-primary btn-lg" href="#" role="button">Check Answers</a>
-                                    </div>                                             
                                 </div>
+                                <br>
+                                <a class="btn btn-primary btn-lg pt-2 pr-4 pb-2 pl-4" id="validate" href="#" role="button">
+                                    <h3>Check Answers</h3>
+                                </a>
                             </div>
                         </div>
-                        <div class="col"></div>   
                     </div>
                 </div>
-            </div> 
-        </div> 
+                <div class="col"></div>
+            </div>
+        </div>
+    </div>
+    </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-<script type="text/javascript">
-      
-    $(document).ready(function() {
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    //--global variables--//
+    <script src="assets/javascript/app.js"></script>
 
-    
-    var correct = 0,
-        incorrect = 0,
-        unanswered = 0,
-        timeleft = 90;
-
-        //  Click event to start the game.
-    window.onload = function() {
-    $("#start").click(downloadTimer.start);
-    };
-
-    //--main countdown timer--//
-
-    var downloadTimer = setInterval(function() {
-        timeleft--;
-        $("#timer").text(timeleft);
-        if (timeleft <= 0)
-            clearInterval(downloadTimer);
-
-            //--Get the current time, pass that into the timer.timeConverter function,
-            //       and save the result in a variable.
-        var converted = timeConverter(timeleft);
-        console.log(converted);
-
-            //--Use the variable we just created to show the converted time in the "timer" div.
-        $("#timer").text(converted); 
-
-            //--Set up the countdown timer to read minutes and seconds correctly on the page. 
-        function timeConverter(t) {
-
-        var minutes = Math.floor(t / 60);
-        var seconds = t - (minutes * 60);
-
-        if (seconds < 10) {
-        seconds = "0" + seconds;
-    }
-
-        if (minutes === 0) {
-        minutes = "00";
-    }   
-        else if (minutes < 10) {
-        minutes = "0" + minutes;
-    }
-
-        return minutes + ":" + seconds;
-    }   
-            
-
-    },1000);
-
-
-});
-</script>
-
-               
 </body>
+
 </html>

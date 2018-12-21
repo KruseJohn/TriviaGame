@@ -17,7 +17,6 @@
     background-color: transparent;  
 }
 
-#btn,
 #title{
     text-align: center; 
     background: -moz-linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 57%, rgba(0,0,255,1) 100%); /* ff3.6+ */
@@ -36,20 +35,22 @@
     color: black;
 }
 
-#qs1, #qs4, #qs7, #qs10 {
+#q1, #q4, #q7, #q10 {
     border: 5px solid red;
     padding: 20px;
 }
 
-#qs2, #qs5, #qs8 {
+#q2, #q5, #q8 {
     border: 5px solid white;
     padding: 20px;
 }
 
-#qs3, #qs6, #qs9 {
+#q3, #q6, #q9 {
     border: 5px solid blue;
     padding: 20px;
 }
+
+
 
 
 
