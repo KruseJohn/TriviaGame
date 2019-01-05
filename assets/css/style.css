@@ -1,3 +1,10 @@
+
+* {
+    margin: 0;
+    padding: 0;
+   /* outline: 1px red; */
+}
+
 .background {
     background-attachment: fixed;
     background-size: cover;
@@ -6,6 +13,7 @@
     width: 100%;
     opacity: 0.9;
 }
+
 
 #body {
     background-position: center;
@@ -33,12 +41,19 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0000ff', endColorstr='#ff0000', GradientType=1);
 }
 
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
+}
+
 #timer {
     text-align: center;
     font-family: monospace;
     font-size: 80px;
     color: black;
-    font-weight: bold;
+    box-shadow: 0px 0px 20px black;
+    background-color: lightgrey;
 }
 
 #qs1,
@@ -68,9 +83,12 @@
 }
 
 #score {
-    font-size: 40px;
-    color: darkred;
+    font-size: 35px;
+    font-weight: bold;
+    color: whitesmoke;
     text-align: center;
+    line-height: 45px;
+    text-shadow: 0px 0px 20px darkred;
 }
 
 #tally {
@@ -78,6 +96,9 @@
     border: 1px solid gray;
     background-color: lightskyblue;
     color: darkblue;
+    font-size: 40px;
+    box-shadow: 0px 0px 2px black;
+    padding: 5px;
 }
 
 #paper {

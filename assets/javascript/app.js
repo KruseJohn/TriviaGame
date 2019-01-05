@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
     //--global variable--//
-    var timeleft = 60;
+    var timeleft = 60; 
 
     //  Click event to start the game.
     window.onload = function () {
-        $("#start").click(downloadTimer.start);
+        $("#start").click(downloadTimer.start);  
     };
 
     // Click event to tally results after the game.
@@ -34,7 +34,7 @@ $(document).ready(function () {
             }
 
             // Display results and hide unwanted elements.
-            $("#title").hide();
+           
             $("#quiz").hide();
             $("#whichState").hide();
             $("#validate").hide();
@@ -43,7 +43,6 @@ $(document).ready(function () {
             $("#tally").show();
             $("#clear").show();
             $("#jack").show();
-
         }
 
     };
@@ -61,8 +60,8 @@ $(document).ready(function () {
     var downloadTimer = setInterval(function () {
         timeleft--;
         $("#timer").text(timeleft);
+        
         if (timeleft <= 0) {
-            alert("Time's Up!!!"); // alert when time is up.
             clearInterval(downloadTimer);
         }
 
@@ -92,8 +91,8 @@ $(document).ready(function () {
 
             return minutes + ":" + seconds;
         }
-
+        
     }, 1000);
 
-
+    
 });
